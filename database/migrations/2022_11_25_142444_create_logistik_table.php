@@ -12,15 +12,14 @@ return new class () extends Migration {
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('logistik', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->unsignedBigInteger('role_id')->default(1);
-            $table->foreign('role_id')->references('id')->on('role');
-            $table->rememberToken();
+            $table->unsignedBigInteger('item_id');
+            $table->foreign('item_id')->references('id')->on('items');
+            $table->integer('stock');
+            $table->integer('demand');
+            $table->unsignedBigInteger('posko_id');
+            $table->foreign('posko_id')->references('id')->on('posko');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class () extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('logistik');
     }
 };
