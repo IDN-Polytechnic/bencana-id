@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class KelasSeeder extends Seeder
+class StatusSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,10 @@ class KelasSeeder extends Seeder
      */
     public function run()
     {
-        $kelas = ['Designer', 'Programmer', 'Network Engineer'];
-        foreach ($kelas as $value) {
-            DB::table('major')->insert([
-                'title' => $value,
-                'major_id' => $value
+        $status = ['Stable', 'Priority', 'Most Priority'];
+        foreach ($status as $value) {
+            DB::table('role')->insert([
+                'name' => $value,
             ]);
         }
     }

@@ -17,7 +17,7 @@ class MajorSeeder extends Seeder
     {
         $major = ['Designer', 'Programmer', 'Network Engineer'];
         foreach ($major as $value) {
-            DB::table('major')->insert([
+            DB::table('majors')->insert([
                 'name' => $value,
             ]);
         }

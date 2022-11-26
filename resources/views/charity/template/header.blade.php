@@ -6,17 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
     <title>Charity IT Class</title>
+    <link rel="stylesheet" href="/resources/css/app.css">
+    <script src="../path/to/flowbite/dist/flowbite.js"></script>
 </head>
 <body>
-    <header class="bg-[url('/images/curv2.png')] ">
-        <img src="/icons/idn-relawan.png" alt="relawanlogo">
-        <img src="/icons/logo-id.png" alt="idnlogo">
-        <nav>
-            <ul>
-                <li><a href="/charity/">Home</a></li>
-                <li><a href="/charity/class">Class</a></li>
-                <li><a href="/charity/about">About us</a></li>
-                <li><a href="/charity/regis">Register</a></li>
+    <img src="/images/curv2.svg" alt="wallpaper" class="absolute top-0 left-0 h-96">
+    <header class="backdrop-blur-lg rounded-3xl flex justify-between mx-20 my-5 p-4 bg-slate-3 fixed w-[105rem] border-[1px]">
+        <div class="flex gap-10 items-center">
+            <div>
+                <img src="/icons/idn-relawan.png" alt="relawanlogo" class="w-20">
+            </div>
+            <div>
+                <img src="/icons/logo_idn.svg" alt="idnlogo" class="w-40">
+            </div>
+        </div>
+        <nav class="flex items-center">
+            <ul class="flex ">
+                <li><a href="#">Home</a></li>
+                <li><a href="#kelas">Kelas</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#regis" class="btn-learn hover:text-white">Register</a></li>
             </ul>
         </nav>
     </header>
