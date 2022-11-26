@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+nav a{
+	@apply mx-10 text-slate-600 hover:text-slate-400 text-lg font-semibold
+}
+
+.btn-learn{
+	@apply px-8 py-4 bg-[#78C6FF] rounded-lg text-white hover:bg-[#487799] font-semibold 
+}
+
+h1{
+	@apply text-8xl font-bold text-idn-1 mb-20
+}
+
+
+.text-idn-1{
+	color: #487799;
+}
+.text-idn-2{
+	color: #78C6FF;
+}

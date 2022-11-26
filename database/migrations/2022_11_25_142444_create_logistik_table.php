@@ -17,6 +17,7 @@ return new class () extends Migration {
             $table->unsignedBigInteger('item_id');
             $table->foreign('item_id')->references('id')->on('items');
             $table->integer('stock');
+            $table->string('satuan')->default('pck');
             $table->integer('demand');
             $table->unsignedBigInteger('posko_id');
             $table->foreign('posko_id')->references('id')->on('posko');

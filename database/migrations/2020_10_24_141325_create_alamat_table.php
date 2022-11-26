@@ -12,10 +12,15 @@ return new class () extends Migration {
      */
     public function up()
     {
-        Schema::create('lembaga', function (Blueprint $table) {
+        Schema::create('alamat', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);
-            $table->integer('crew_all')->nullable();
+            $table->string('jalan');
+            $table->integer('rt');
+            $table->integer('rw');
+            $table->string('kel');
+            $table->string('kec');
+            $table->string('kab');
+            $table->string('prov');
             $table->timestamps();
         });
     }
@@ -27,6 +32,6 @@ return new class () extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('lembaga');
+        Schema::dropIfExists('alamat');
     }
 };

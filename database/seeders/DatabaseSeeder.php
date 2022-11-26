@@ -4,6 +4,10 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Database\Seeders\RoleSeeder;
+use Database\Seeders\KelasSeeder;
+use Database\Seeders\StatusSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +24,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $this->call([
+            RoleSeeder::class,
+            StatusSeeder::class
+        ]);
+        
     }
 }

@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class () extends Migration {
+return new class extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -12,10 +13,13 @@ return new class () extends Migration {
      */
     public function up()
     {
-        Schema::create('lembaga', function (Blueprint $table) {
+        Schema::create('pesertas', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);
-            $table->integer('crew_all')->nullable();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('nomor');
+            $table->unsignedBigInteger('kelas_id');
+            $table->foreign('kelas_id')->references('id')->on('kelas');
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ return new class () extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('lembaga');
+        Schema::dropIfExists('pesertas');
     }
 };
