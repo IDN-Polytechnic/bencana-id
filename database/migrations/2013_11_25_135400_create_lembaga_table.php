@@ -15,7 +15,7 @@ return new class () extends Migration {
         Schema::create('lembaga', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
-            $table->integer('crew_all');
+            $table->integer('crew_all')->nullable();
             $table->timestamps();
         });
     }

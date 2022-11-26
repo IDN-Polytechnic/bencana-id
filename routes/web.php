@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\PoskoController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,22 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+Route::resource('/', PoskoController::class);
+Auth::routes();
 
-Route::get('/posko', function () {
-    return view('/posko/posko');
-});
-
-Route::get('/posko/create', function () {
-    return view('/posko/createposko');
-});
-
-Route::get('/logistik', function () {
-    return view('/logistik/logistik');
-});
-
-Route::get('/logistik/create', function () {
-    return view('/logistik/createlogistik');
-});
+Route::get('/home', [HomeController::class, 'index'])->name('home');
