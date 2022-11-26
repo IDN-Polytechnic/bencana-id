@@ -32,3 +32,7 @@ Route::get('/logistik', function () {
 Route::get('/logistik/create', function () {
     return view('/logistik/createlogistik');
 });
+
+Route::get('/login', function () {
+    return view('/login/login');
+});
