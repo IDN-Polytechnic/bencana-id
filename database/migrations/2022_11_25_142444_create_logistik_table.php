@@ -18,7 +18,7 @@ return new class () extends Migration {
             $table->foreign('item_id')->references('id')->on('items');
             $table->integer('stock');
             $table->integer('demand');
-            $table->bigInteger('votes')->nullable()->default(12);
+            $table->unsignedBigInteger('satuan_id')->default(1);
             $table->foreign('satuan_id')->references('id')->on('satuan');
             $table->unsignedBigInteger('posko_id');
             $table->foreign('posko_id')->references('id')->on('posko');

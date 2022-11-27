@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Seeders\Satuan;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -33,5 +34,9 @@ class Posko extends Model
     public function status()
     {
         return $this->belongsTo(Status::class, 'name');
+    }
+    public function satuan()
+    {
+        return $this->belongsTo(Satuan::class, 'name');
     }
 }

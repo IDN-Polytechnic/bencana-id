@@ -11,15 +11,13 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-      <!-- Preloader -->
-      @include('template/preloader')
-
-      <!-- Navbar -->
-      @include('template/nav')
-      <!-- /.navbar -->
-
-      <!-- Main Sidebar Container -->
-      @include('template/aside')
+    <!-- Preloader -->
+    @include('template/preloader')
+    <!-- Navbar -->
+    @include('template/nav')
+    <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
+    @include('template/aside')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -75,6 +73,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+
+                                        @foreach ($collection as $item)
+                                            
+                                        @endforeach
                                         <tr>
                                             <td>1</td>
                                             <td>Cugenang 1</td>
@@ -103,35 +105,6 @@
                                                     <li>23 Dus</li>
                                                     <li>4 pcs</li>
                                                     <li>2 pcs</li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Cugenang 1</td>
-                                            <td>Kec Cugenang puskesmas raya kali</td>
-                                            <td>
-                                                <ul>
-                                                    <li>Mie Instant</li>
-                                                    <li>Air Mineral</li>
-                                                    <li>Susu</li>
-                                                    <li>Minyak</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                <ul>
-                                                    <li>300 Dus</li>
-                                                    <li>402 Dus</li>
-                                                    <li>120 pcs</li>
-                                                    <li>51 pcs</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                <ul>
-                                                    <li>30 Dus</li>
-                                                    <li>42 Dus</li>
-                                                    <li>12 pcs</li>
-                                                    <li>5 pcs</li>
                                                 </ul>
                                             </td>
                                         </tr>

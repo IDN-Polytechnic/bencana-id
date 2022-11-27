@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/posko', PoskoController::class);
 Auth::routes();
 // Route::resource('/', PoskoController::class);
+// Route::get('/posko/create', view('posko.createposko'));
 Route::view('/', 'dashboard');
 Route::view('/posko', 'posko/posko');
 Route::view('/posko/create', 'posko/createposko');
