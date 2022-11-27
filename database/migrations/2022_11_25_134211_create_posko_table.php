@@ -15,17 +15,17 @@ return new class () extends Migration {
         Schema::create('posko', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('alamat_id');
-            $table->foreign('alamat_id')->references('id')->on('alamat');
-            $table->string('link_gps');
+            $table->string('alamat')->nullable();
+            $table->string('link_gps')->nullable();
             $table->string('kordinator')->nullable();
             $table->string('telp_kordinator')->nullable();
-            $table->unsignedBigInteger('relawan_user');
+            $table->unsignedBigInteger('relawan_user')->nullable();
             $table->foreign('relawan_user')->references('id')->on('users');
-            $table->unsignedBigInteger('lembaga_id');
+            $table->unsignedBigInteger('lembaga_id')->nullable();
             $table->foreign('lembaga_id')->references('id')->on('lembaga');
-            $table->integer('jumblah_korban')->nullable();
-            $table->unsignedBigInteger('status_id')->default(1);
+            $table->string('pengungsi')->nullable();
+            $table->string('notes')->nullable();
+            $table->unsignedBigInteger('status_id')->nullable()->default(3);
             $table->foreign('status_id')->references('id')->on('status');
             $table->timestamps();
         });

@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', PoskoController::class);
+Route::resource('/posko', PoskoController::class);
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
