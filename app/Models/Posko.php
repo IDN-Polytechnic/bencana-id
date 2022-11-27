@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
-use Database\Seeders\Satuan;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Posko extends Model
 {
     use HasFactory;
-    protected $table = 'posko';
-    protected $guarded = ['id'];
+    // protected $table = 'posko';
+    // protected $guarded = ['id'];
     
     // public function sluggable(): array
     // {
@@ -23,20 +21,20 @@ class Posko extends Model
     // }
 
 
-    public function users()
-    {
-        return $this->belongsTo(Lembaga::class, 'name');
-    }
-    public function lembaga()
-    {
-        return $this->belongsTo(User::class, 'name');
-    }
-    public function status()
-    {
-        return $this->belongsTo(Status::class, 'name');
-    }
-    public function satuan()
-    {
-        return $this->belongsTo(Satuan::class, 'name');
-    }
+    // public function users()
+    // {
+    //     return $this->belongsTo(Lembaga::class, 'name');
+    // }
+    // public function lembaga()
+    // {
+    //     return $this->belongsTo(User::class, 'name');
+    // }
+    // public function status()
+    // {
+    //     return $this->belongsTo(Status::class, 'name');
+    // }
+    // public function satuan()
+    // {
+    //     return $this->belongsTo(Satuan::class, 'name');
+    // }
 }

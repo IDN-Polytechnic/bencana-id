@@ -73,22 +73,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                        @foreach ($collection as $item)
-                                            
-                                        @endforeach
+                                        {{ $i = 0; }}
+                                        @foreach ($poskos as $posko)
                                         <tr>
-                                            <td>1</td>
-                                            <td>Cugenang 1</td>
+                                            <td>{{ $i++ }}</td>
+                                            <td>{{ $posko->name }}</td>
                                             <td>
-                                                <a href="http://" target="_blank" rel="noopener noreferrer">Cugenang Raya 1</a>
+                                                <a href="{{ $posko->link_gps }}" target="_blank" rel="noopener noreferrer">{{ $posko->alamat }}</a>
                                             </td>
                                             <td>
                                                 <ul>
-                                                    <li>Mie Instant</li>
-                                                    <li>Air Mineral</li>
-                                                    <li>Susu</li>
-                                                    <li>Minyak</li>
+                                                    @foreach ($posko->items as $item)
+                                                    <li>{{ $posko->name }}</li>
+                                                    @endforeach
                                                 </ul>
                                             </td>
                                             <td>
@@ -108,6 +105,8 @@
                                                 </ul>
                                             </td>
                                         </tr>
+                                        @endforeach
+                                        
                                     </tbody>
                                 </table>
                             </div>

@@ -9,8 +9,8 @@ class PoskoController extends Controller
 {
     public function index()
     {
-        $posko = Posko::all();
-        return view('posko.posko', compact(['posko']));
+        $poskos = Posko::all();
+        return view('posko.posko', ['poskos' => $poskos]);
     }
 
     public function create()
