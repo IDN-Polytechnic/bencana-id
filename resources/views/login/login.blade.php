@@ -1,9 +1,10 @@
 <!doctype html>
-<html>
+<html data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
+  <link rel="stylesheet" href="/resources/css/custom.css">
 </head>
 <body>
   <section class="h-screen">
@@ -17,13 +18,13 @@
           />
         </div>
         <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-          <h3 class="text-slate-[#0056B3]">Login</h3>
+          <h3 class="text-[#0056B3] text-center py-8 font-bold text-4xl">Login Account</h3>
           <form>
             <!-- Email input -->
             <div class="mb-6">
               <input
                 type="text"
-                class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-[#598BFF] text-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 placeholder="Email address"
               />
             </div>
@@ -32,7 +33,7 @@
             <div class="mb-6">
               <input
                 type="password"
-                class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-[#598BFF] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 placeholder="Password"
               />
             </div>

@@ -17,7 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', PoskoController::class);
-Auth::routes();
+// Route::resource('/', PoskoController::class);
+Route::view('/', 'dashboard');
+Route::view('/posko', 'posko/posko');
+Route::view('/posko/create', 'posko/createposko');
+Route::view('/logistik', 'logistik/logistik');
+Route::view('/logistik/create', 'logistik/createlogistik');
+Route::view('/login', '/login/login');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
