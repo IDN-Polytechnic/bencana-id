@@ -26,3 +26,4 @@ Route::view('/logistik/create', 'logistik/createlogistik');
 Route::view('/login', '/login/login');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+

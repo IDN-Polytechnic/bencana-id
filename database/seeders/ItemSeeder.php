@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class RoleSeeder extends Seeder
+class ItemSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,9 +15,9 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        $role = ['admin', 'volunteer', 'guest'];
+        $role = ['Mie Instant', 'Peralatan Bayi', 'guest'];
         foreach ($role as $value) {
-            DB::table('role')->insert([
+            DB::table('items')->insert([
                 'name' => $value,
             ]);
         }
