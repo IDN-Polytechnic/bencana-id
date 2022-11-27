@@ -15,8 +15,8 @@ class ItemSeeder extends Seeder
      */
     public function run()
     {
-        $role = ['Mie Instant', 'Peralatan Bayi', 'guest'];
-        foreach ($role as $value) {
+        $items = ['Mie Instant', 'Peralatan Bayi', 'Air Mineral', 'Beras', 'Tempat Tidur', 'Selimut'];
+        foreach ($items as $value) {
             DB::table('items')->insert([
                 'name' => $value,
             ]);

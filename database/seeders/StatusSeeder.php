@@ -17,7 +17,7 @@ class StatusSeeder extends Seeder
     {
         $status = ['Sangat Prioritas','Prioritas', 'Stable'];
         foreach ($status as $value) {
-            DB::table('status')->insert([
+            DB::table('statuses')->insert([
                 'name' => $value,
             ]);
         }

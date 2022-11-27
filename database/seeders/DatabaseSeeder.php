@@ -23,10 +23,13 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             RoleSeeder::class,
+            DelegationSeeder::class,
+            ItemSeeder::class,
+            UnitSeeder::class,
             StatusSeeder::class,
             UserSeeder::class,
-            LembagaSeeder::class,
             PoskoSeeder::class,
+            LogisticSeeder::class,
         ]);
         
     }
